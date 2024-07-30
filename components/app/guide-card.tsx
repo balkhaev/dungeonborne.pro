@@ -2,31 +2,29 @@ import Link from "next/link"
 import { Button } from "../ui/button"
 import { Tables } from "@/database.types"
 
-type Props = {
-  item: Tables<"guides">
-}
+type Props = Partial<Tables<"guides">> & { slug: string }
 
-export default function GuideCard({ item }: Props) {
+export default function GuideCard({ image, id, title, slug }: Props) {
   return (
     <div className="bg-[#2b2b2b] rounded-lg shadow-md overflow-hidden">
-      {item.image && (
-        <Link href={`/guides/${item.id}`}>
+      {image && (
+        <Link href={`/guides/${id}`}>
           <img
-            src={item.image}
+            src={image}
             alt="Новость 1"
             className="w-full h-48 object-cover"
           />
         </Link>
       )}
       <div className="p-4">
-        <Link href={`/guides/${item.id}`}>
-          <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+        <Link href={`/guides/${id}`}>
+          <h3 className="text-xl font-bold mb-2">{title}</h3>
         </Link>
         <p className="text-gray-400 mb-4">
           Узнайте, как быстро прокачать своего героя.
         </p>
 
-        <Link href={`/guides/${item.id}`}>
+        <Link href={`/guides/${slug}`}>
           <Button>Читать гайд</Button>
         </Link>
       </div>

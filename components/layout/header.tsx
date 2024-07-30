@@ -48,7 +48,7 @@ export default async function AppHeader() {
                   {/* <ListItem href="/starter" title="Новичку">
                       Все что нужно знать новому игроку
                     </ListItem> */}
-                  <ListItem href="/gold" title="Фарм золота">
+                  <ListItem href="/guides/gold" title="Фарм золота">
                     Как фармить золото
                   </ListItem>
                 </ul>

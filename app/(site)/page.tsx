@@ -1,7 +1,5 @@
 import Image from "next/image"
 import heroImage from "./hero.png"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import NewsCard from "@/components/app/news-card"
 import GuideCard from "@/components/app/guide-card"
 import { createClient } from "@/utils/supabase/server"
@@ -10,7 +8,6 @@ export default async function HomePage() {
   const supabase = createClient()
 
   const { data: news } = await supabase.from("news").select("*")
-  const { data: guides } = await supabase.from("guides").select("*")
 
   return (
     <>
@@ -55,9 +52,7 @@ export default async function HomePage() {
         <section className="mb-8">
           <h2 className="text-3xl font-bold mb-4">Популярные гайды</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {guides?.map((item) => (
-              <GuideCard key={item.id} item={item} />
-            ))}
+            <GuideCard title="Как фармить золото" content="Учим" slug="gold" />
           </div>
         </section>
       </main>
