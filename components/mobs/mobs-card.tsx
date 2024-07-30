@@ -23,7 +23,7 @@ export default function MobsCard({
   return (
     <Card>
       <Link href={`/mobs/${slug}`}>
-        <CardTitle className="border-b-2 p-4 hover:bg-neutral-800 rounded-t-xl">
+        <CardTitle className="border-b-2 p-4 hover:bg-neutral-800 rounded-t-xl whitespace-nowrap text-ellipsis overflow-hidden">
           {name}
         </CardTitle>
       </Link>
@@ -34,7 +34,9 @@ export default function MobsCard({
       <Link href={`/mobs/${slug}`}>
         <img src={image || ""} className="object-cover w-full aspect-[5/6]" />
       </Link>
-      <div className="p-4">{description}</div>
+      <div className="p-4">
+        <div className="line-clamp-4">{description}</div>
+      </div>
     </Card>
   )
 }
