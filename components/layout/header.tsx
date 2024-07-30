@@ -59,6 +59,9 @@ export default async function AppHeader() {
                   <ListItem href="/guides/sets" title="Эффекты сетов">
                     Описания всех эффектов от сетов
                   </ListItem>
+                  <ListItem href="/guides/relics" title="Реликвии">
+                    Как достать все 3 реликвии
+                  </ListItem>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

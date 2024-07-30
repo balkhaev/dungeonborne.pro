@@ -55,14 +55,20 @@ export default async function HomePage() {
             <GuideCard
               image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/0.jpg"
               title="Как фармить золото"
-              slug="gold"
+              href="/guides/gold"
               description="Все что нужно знать новому игроку для фарма"
             />
             <GuideCard
               image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/8f465dbe2ddaf1c6491b362e2cef6740.jpg"
               title="Эффекты сетов"
-              slug="sets"
+              href="/guides/sets"
               description="Описания всех эффектов от сетов"
+            />
+            <GuideCard
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/Dungeonborne-Hero-500.jpg"
+              title="Реликвии"
+              href="/guides/relics"
+              description="Как получить все легендарные реликвии"
             />
           </div>
         </section>

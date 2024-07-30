@@ -15,7 +15,7 @@ export default async function DefaulyLayout({
     <div className="dark text-white min-h-screen flex flex-col">
       <AppHeader />
       <div className="container mx-auto py-8">{children}</div>
-      <footer className="bg-muted py-6 mt-auto">
+      <footer className="bg-secondary py-6 mt-auto">
         <div className="container mx-auto flex justify-between items-center">
           <p className="text-gray-400">
             &copy; 2024{" "}
