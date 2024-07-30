@@ -1,20 +1,40 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/UapFbqNdvsX
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+
 import { Tables } from "@/database.types"
-import { Card, CardContent, CardHeader } from "../ui/card"
+import { Card, CardTitle } from "../ui/card"
+import RiskBadge from "../badges/risk-badge"
+import DropBadge from "../badges/drop-badge"
+import Link from "next/link"
 
-type Props = {
-  item: Tables<"mobs">
-}
+type Props = Tables<"mobs">
 
-export default function MobsCard({ item }: Props) {
+export default function MobsCard({
+  name,
+  slug,
+  risk,
+  drop,
+  image,
+  description,
+}: Props) {
   return (
     <Card>
-      <CardHeader>
-        <div className="text-xl font-bold">{item.name}</div>
-      </CardHeader>
-      {item.image && (
-        <img src={item.image} className="w-full h-80 object-cover" />
-      )}
-      <CardContent className="mt-4">{item.comment}</CardContent>
+      <Link href={`/mobs/${slug}`}>
+        <CardTitle className="border-b-2 p-4 hover:bg-neutral-800 rounded-t-xl">
+          {name}
+        </CardTitle>
+      </Link>
+      <div className="p-2 flex gap-2">
+        <RiskBadge risk={risk} />
+        <DropBadge drop={drop} />
+      </div>
+      <Link href={`/mobs/${slug}`}>
+        <img src={image || ""} className="object-cover w-full aspect-[5/6]" />
+      </Link>
+      <div className="p-4">{description}</div>
     </Card>
   )
 }

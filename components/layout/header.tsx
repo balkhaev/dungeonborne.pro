@@ -41,6 +41,11 @@ export default async function AppHeader() {
                 Карты
               </NavigationMenuLink>
             </Link>
+            <Link href="/mobs" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Мобы
+              </NavigationMenuLink>
+            </Link>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Гайды</NavigationMenuTrigger>
               <NavigationMenuContent>

@@ -100,30 +100,57 @@ export type Database = {
           },
         ]
       }
-      mobs: {
+      locations: {
         Row: {
-          comment: string | null
           created_at: string
           description: string | null
           id: number
-          image: string | null
           name: string | null
         }
         Insert: {
-          comment?: string | null
           created_at?: string
           description?: string | null
           id?: number
-          image?: string | null
           name?: string | null
         }
         Update: {
-          comment?: string | null
           created_at?: string
           description?: string | null
           id?: number
+          name?: string | null
+        }
+        Relationships: []
+      }
+      mobs: {
+        Row: {
+          created_at: string
+          description: string | null
+          drop: Database["public"]["Enums"]["drop"]
+          id: number
+          image: string | null
+          name: string | null
+          risk: Database["public"]["Enums"]["risk"]
+          slug: string | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          drop?: Database["public"]["Enums"]["drop"]
+          id?: number
           image?: string | null
           name?: string | null
+          risk?: Database["public"]["Enums"]["risk"]
+          slug?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          drop?: Database["public"]["Enums"]["drop"]
+          id?: number
+          image?: string | null
+          name?: string | null
+          risk?: Database["public"]["Enums"]["risk"]
+          slug?: string | null
         }
         Relationships: []
       }
@@ -258,10 +285,47 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      iuliia_translate: {
+        Args: {
+          str: string
+          rules: Json
+        }
+        Returns: string
+      }
+      iuliia_translate_mosmetro: {
+        Args: {
+          str: string
+        }
+        Returns: string
+      }
+      iuliia_translate_wikipedia: {
+        Args: {
+          str: string
+        }
+        Returns: string
+      }
+      slugify: {
+        Args: {
+          v: string
+        }
+        Returns: string
+      }
+      unaccent: {
+        Args: {
+          "": string
+        }
+        Returns: string
+      }
+      unaccent_init: {
+        Args: {
+          "": unknown
+        }
+        Returns: unknown
+      }
     }
     Enums: {
-      [_ in never]: never
+      drop: "low" | "normal" | "high"
+      risk: "low" | "normal" | "high"
     }
     CompositeTypes: {
       [_ in never]: never

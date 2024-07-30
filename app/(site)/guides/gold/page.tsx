@@ -8,7 +8,11 @@ import { createClient } from "@/utils/supabase/server"
  */
 export default async function GoldPage() {
   const supabase = createClient()
-  const { data } = await supabase.from("mobs").select("*")
+  const { data } = await supabase
+    .from("mobs")
+    .select("*")
+    .eq("drop", "high")
+    .neq("risk", "high")
 
   return (
     <div className="py-12 md:py-20 px-4 md:px-6">
@@ -95,9 +99,10 @@ export default async function GoldPage() {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 w-full max-w-4xl mx-auto">
-            High Value мобы
-          </h2>
+          <div className="w-full max-w-4xl mx-auto mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold">High value мобы</h2>
+            <div className="text-gray-400">с низким риском</div>
+          </div>
           {data && <MobsList items={data} />}
         </div>
         <div className="w-full max-w-4xl mx-auto">
