@@ -1,0 +1,98 @@
+.markdown {
+  font: 15px Helvetica, arial, freesans, clean, sans-serif;
+  word-wrap: break-word;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.markdown a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+.markdown p,
+.markdown blockquote,
+.markdown ul,
+.markdown ol,
+.markdown dl,
+.markdown table,
+.markdown pre {
+  margin: 15px 0;
+}
+
+.markdown ul,
+.markdown ol {
+  list-style: outside;
+  padding-left: 30px;
+}
+
+.markdown h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 2em;
+}
+
+.markdown h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 1.6em;
+}
+
+.markdown h3 {
+  font-size: 1.2em;
+}
+
+.markdown h4 {
+  font-size: 0.8em;
+}
+
+.markdown h5 {
+  font-size: 0.4em;
+}
+
+.markdown h6 {
+  color: #777;
+  font-size: 1em;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: bold;
+  line-height: 1.7;
+  margin: 1em 0 15px 0;
+}
+
+.markdown h1 + p,
+.markdown h2 + p,
+.markdown h3 + p {
+  margin-top: 10px;
+}
+
+.markdown img {
+  max-width: 100%;
+}
+
+.markdown code,
+.markdown pre {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: pre;
+}
+
+.markdown pre code {
+  border: none;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+}
