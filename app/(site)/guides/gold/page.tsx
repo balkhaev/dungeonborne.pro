@@ -11,7 +11,7 @@ export default async function GoldPage() {
   const { data } = await supabase.from("mobs").select("*")
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-12 md:py-20 px-4 md:px-6">
+    <div className="py-12 md:py-20 px-4 md:px-6">
       <div className="space-y-12 md:space-y-16">
         <div className="text-center">
           <h1 className="text-3xl md:text-4xl font-bold">
@@ -21,7 +21,7 @@ export default async function GoldPage() {
             Эффективные способы заработка золота для успешной игры
           </p>
         </div>
-        <div>
+        <div className="w-full max-w-4xl mx-auto">
           <p>
             Золото в Dungeonborne добывать не сложно, главное ходить в локации 3
             и 4 уровня и иметь мобильный класс.{" "}
@@ -29,7 +29,7 @@ export default async function GoldPage() {
             Есть несколько вариантов как можно действовать
           </p>
         </div>
-        <div>
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold">Подходящие классы</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -68,7 +68,7 @@ export default async function GoldPage() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold">Локации</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -95,12 +95,12 @@ export default async function GoldPage() {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 w-full max-w-4xl mx-auto">
             High Value мобы
           </h2>
           {data && <MobsList items={data} />}
         </div>
-        <div>
+        <div className="w-full max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold">Заключение</h2>
           <p className="mt-4">
             Роумим указанных мобов (позже добавим карту с маршрутом), избегаем
