@@ -53,22 +53,28 @@ export default async function HomePage() {
           <h2 className="text-3xl font-bold mb-4">Популярные гайды</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <GuideCard
-              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/0.jpg"
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/8f465dbe2ddaf1c6491b362e2cef6740.jpg"
               title="Как фармить золото"
               href="/guides/gold"
               description="Все что нужно знать новому игроку для фарма"
             />
             <GuideCard
-              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/8f465dbe2ddaf1c6491b362e2cef6740.jpg"
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/0.jpg"
               title="Эффекты сетов"
               href="/guides/sets"
               description="Описания всех эффектов от сетов"
             />
             <GuideCard
-              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/Dungeonborne-Hero-500.jpg"
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/b446b6c6b4d34b24a9526d7937d208ed.jpg"
               title="Реликвии"
               href="/guides/relics"
               description="Как получить все легендарные реликвии"
+            />
+            <GuideCard
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/Dungeonborne-Hero-500.jpg"
+              title="Мобы"
+              href="/mobs"
+              description="Бестиарий всех врагов и боссов в игре"
             />
           </div>
         </section>

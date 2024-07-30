@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Tables } from "@/database.types"
+import { Card } from "../ui/card"
 
 type Props = {
   item: Tables<"news">
@@ -8,13 +9,13 @@ type Props = {
 
 export default function NewsCard({ item }: Props) {
   return (
-    <div className="bg-[#2b2b2b] rounded-lg shadow-md overflow-hidden">
+    <Card>
       {item.image && (
         <Link href={`/news/${item.id}`}>
           <img
             src={item.image}
             alt="Новость 1"
-            className="w-full h-48 object-cover"
+            className="rounded-t-xl w-full h-48 object-cover"
           />
         </Link>
       )}
@@ -26,6 +27,6 @@ export default function NewsCard({ item }: Props) {
           <Button>Читать далее</Button>
         </Link>
       </div>
-    </div>
+    </Card>
   )
 }

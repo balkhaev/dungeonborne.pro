@@ -18,6 +18,7 @@ export default async function DefaulyLayout({
       <footer className="bg-secondary py-6 mt-auto">
         <div className="container mx-auto flex justify-between items-center">
           <p className="text-gray-400">
+            <span className="text-gray-400">В разработке с 29.07.2024</span>{" "}
             &copy; 2024{" "}
             <a
               className="underline"

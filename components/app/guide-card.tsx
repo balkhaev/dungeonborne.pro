@@ -1,18 +1,19 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Tables } from "@/database.types"
+import { Card } from "../ui/card"
 
 type Props = Partial<Tables<"guides">> & { href: string; description?: string }
 
 export default function GuideCard({ image, title, href, description }: Props) {
   return (
-    <div className="bg-[#2b2b2b] rounded-lg shadow-md overflow-hidden">
+    <Card>
       {image && (
         <Link href={href}>
           <img
             src={image}
             alt="Новость 1"
-            className="w-full h-48 object-cover"
+            className="rounded-t-xl w-full h-48 object-cover"
           />
         </Link>
       )}
@@ -26,6 +27,6 @@ export default function GuideCard({ image, title, href, description }: Props) {
           <Button>Читать гайд</Button>
         </Link>
       </div>
-    </div>
+    </Card>
   )
 }
