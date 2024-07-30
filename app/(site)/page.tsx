@@ -52,7 +52,18 @@ export default async function HomePage() {
         <section className="mb-8">
           <h2 className="text-3xl font-bold mb-4">Популярные гайды</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <GuideCard title="Как фармить золото" content="Учим" slug="gold" />
+            <GuideCard
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/0.jpg"
+              title="Как фармить золото"
+              slug="gold"
+              description="Все что нужно знать новому игроку для фарма"
+            />
+            <GuideCard
+              image="https://soveabqnhwtbhczxzwtn.supabase.co/storage/v1/object/public/dungeonborne/8f465dbe2ddaf1c6491b362e2cef6740.jpg"
+              title="Эффекты сетов"
+              slug="sets"
+              description="Описания всех эффектов от сетов"
+            />
           </div>
         </section>
       </main>

@@ -22,7 +22,7 @@ export default async function AppHeader() {
     .select("id, name, description, slug")
 
   return (
-    <header className="bg-muted py-4 px-6 shadow-md">
+    <header className="bg-secondary py-4 px-6 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <div className="items-center gap-4">
           <Link href="/" className="flex items-center">
@@ -49,7 +49,10 @@ export default async function AppHeader() {
                       Все что нужно знать новому игроку
                     </ListItem> */}
                   <ListItem href="/guides/gold" title="Фарм золота">
-                    Как фармить золото
+                    Узнай как фармить золото
+                  </ListItem>
+                  <ListItem href="/guides/sets" title="Эффекты сетов">
+                    Описания всех эффектов от сетов
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
