@@ -15,7 +15,7 @@ export default async function NewsPage({ params: { id } }: any) {
   const contentHtml = processedContent.toString()
 
   return (
-    <div className="text-white">
+    <div className="text-white max-w-4xl w-full mx-auto">
       <header className="py-8">
         <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
         {/* <p className="text-lg text-[#b3b3b3]">
@@ -23,6 +23,7 @@ export default async function NewsPage({ params: { id } }: any) {
           подземелья.
         </p> */}
       </header>
+      {data.image && <img src={data.image} className="w-full" />}
       <main
         className="py-6 markdown"
         dangerouslySetInnerHTML={{
