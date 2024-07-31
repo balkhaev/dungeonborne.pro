@@ -7,7 +7,10 @@ import { createClient } from "@/utils/supabase/server"
 export default async function HomePage() {
   const supabase = createClient()
 
-  const { data: news } = await supabase.from("news").select("*")
+  const { data: news } = await supabase
+    .from("news")
+    .select("*")
+    .order("created_at", { ascending: false })
 
   return (
     <>
