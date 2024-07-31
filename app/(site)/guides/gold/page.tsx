@@ -1,6 +1,10 @@
 import MobsList from "@/components/mobs/mobs-list"
 import { createClient } from "@/utils/supabase/server"
 
+export const metadata = {
+  title: "Гайд по фарму золота в Dungeonborne",
+}
+
 /**
  * v0 by Vercel.
  * @see https://v0.dev/t/D9LlDh9Goey
