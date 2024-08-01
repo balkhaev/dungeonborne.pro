@@ -10,6 +10,7 @@ export default async function HomePage() {
   const { data: news } = await supabase
     .from("news")
     .select("*")
+    .limit(3)
     .order("created_at", { ascending: false })
 
   return (
