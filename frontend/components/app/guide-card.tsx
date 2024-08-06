@@ -1,9 +1,14 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { Tables } from "@/database.types"
 import { Card } from "../ui/card"
+import { Table } from "@/types/strapi"
+import { ApiGuideGuide } from "@/types/contentTypes"
 
-type Props = Partial<Tables<"guides">> & { href: string; description?: string }
+type Props = Partial<Table<ApiGuideGuide>> & {
+  href: string
+  description?: string
+  image?: string
+}
 
 export default function GuideCard({ image, title, href, description }: Props) {
   return (

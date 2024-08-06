@@ -1,8 +1,9 @@
-import { Tables } from "@/database.types"
+import { Table } from "@/types/strapi"
 import { Badge } from "../ui/badge"
+import { ApiEnemyEnemy } from "@/types/contentTypes"
 
 type Props = {
-  drop: Tables<"mobs">["drop"]
+  drop: Table<ApiEnemyEnemy>["drop"]
 }
 
 const textMap = {
@@ -14,7 +15,7 @@ const textMap = {
 export default function DropBadge({ drop }: Props) {
   return (
     <Badge variant="secondary" className="bg-pink-950 hover:bg-pink-900">
-      {textMap[drop]}
+      {textMap[drop as keyof typeof textMap]}
     </Badge>
   )
 }

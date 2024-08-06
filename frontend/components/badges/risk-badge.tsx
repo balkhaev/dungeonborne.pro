@@ -1,8 +1,9 @@
-import { Tables } from "@/database.types"
+import { Table } from "@/types/strapi"
 import { Badge } from "../ui/badge"
+import { ApiEnemyEnemy } from "@/types/contentTypes"
 
 type Props = {
-  risk: Tables<"mobs">["risk"]
+  risk: Table<ApiEnemyEnemy>["risk"]
 }
 
 const textMap = {
@@ -14,7 +15,7 @@ const textMap = {
 export default function RiskBadge({ risk }: Props) {
   return (
     <Badge variant="secondary" className="bg-slate-950 hover:bg-slate-900">
-      {textMap[risk]}
+      {textMap[risk as keyof typeof textMap]}
     </Badge>
   )
 }
