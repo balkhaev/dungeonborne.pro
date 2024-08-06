@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enemies",
+  "info": {
+    "singularName": "enemy",
+    "pluralName": "enemies",
+    "displayName": "Enemy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "risk": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "normal",
+        "low"
+      ]
+    },
+    "drop": {
+      "type": "enumeration",
+      "enum": [
+        "high",
+        "normal",
+        "low"
+      ]
+    }
+  }
+}
