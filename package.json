@@ -1,13 +1,11 @@
 {
   "name": "dungeonborne.pro",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
   "scripts": {
     "types": "cd backend && npm run types && cd ../ && node bin/copyTypes.js",
-    "deploy": ""
+    "deploy:setup": "pm2 deploy production setup",
+    "deploy": "pm2 deploy production",
+    "pm2:prod": "pm2 start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "balkhaev"
 }

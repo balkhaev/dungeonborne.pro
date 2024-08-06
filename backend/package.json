@@ -8,10 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "types": "strapi ts:generate-types",
-    "deploy:setup": "pm2 deploy production setup",
-    "deploy": "pm2 deploy production",
-    "pm2:prod": "pm2 start npm -- start"
+    "types": "strapi ts:generate-types"
   },
   "devDependencies": {
     "typescript": "^5",
