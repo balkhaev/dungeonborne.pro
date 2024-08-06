@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "ru-frontend",
+      name: "dungeonborne-frontend",
       script: "node_modules/next/dist/bin/next",
       args: "start",
       exec_mode: "cluster",

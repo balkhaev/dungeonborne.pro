@@ -1,11 +1,9 @@
 module.exports = {
   apps: [
     {
-      name: "ru-frontend",
-      script: "node_modules/next/dist/bin/next",
+      name: "dungeonborne-backend",
+      script: "node_modules/.bin/strapi",
       args: "start",
-      exec_mode: "cluster",
-      instances: "max",
       env: {
         NODE_ENV: "production",
         PORT: 3000,
