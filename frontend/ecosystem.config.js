@@ -21,7 +21,7 @@ module.exports = {
       repo: "git@github.com:balkhaev/dungeonborne.pro.git",
       path: "/root/site/dungeonborne/frontend",
       "pre-deploy-local": "sh ./bin/copy-envs.sh",
-      "post-deploy": "sh ./bin/post-deploy.sh",
+      "post-deploy": "sh ./frontend/bin/post-deploy.sh",
       "post-setup": "",
     },
   },
